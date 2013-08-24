@@ -17,4 +17,5 @@ Create instance of LoaderIo
 
 Call required functions
 
+    //Get all apps
     $loaderIo->getAllApps();
