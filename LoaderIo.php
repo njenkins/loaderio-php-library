@@ -62,6 +62,17 @@ class LoaderIo {
                 ->send();
         return $test->body;
     }
+    /**
+     * Delete an existing loader.io app
+     * @param type $appId - The id of the app to be deleted
+     */
+    public function deleteApp($appId){
+        $deleteApp = Httpful\Request::delete(self::API_URL . '/apps/'. $appId)
+                ->addHeaders(array(
+                    'loaderio-auth' => self::API_KEY
+                ))->send();
+        return $deleteApp->body;
+    }
     
 
 }
