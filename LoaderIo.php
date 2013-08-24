@@ -27,7 +27,7 @@ class LoaderIo {
 
     /**
      * Get the details of an individual app
-     * @param string $app_id The unique app id
+     * @param string $appId The unique app id
      */
     public function getApp($appId) {
         $app = Httpful\Request::get(self::API_URL . '/apps/' . $appId)
@@ -52,7 +52,7 @@ class LoaderIo {
 
     /**
      * Get the details of an individual test
-     * @param string $test_id The id of the test to be retrieved
+     * @param string $testId The id of the test to be retrieved
      */
     public function getTest($testId) {
         $test = Httpful\Request::get(self::API_URL . '/tests/' . $testId)
