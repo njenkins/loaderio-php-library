@@ -136,6 +136,18 @@ class LoaderIo {
                 ->send();
         return $test->body;
     }
+    /**
+     * Get a list of servers currently being used for load tests.
+     */
+    public function getAllServers(){
+        $allServers = Httpful\Request::get(self::API_URL . '/servers')
+                ->addHeaders(array(
+                    'loaderio-auth' => self::API_KEY
+                ))
+                ->send();
+        return $allServers->body;
+        
+    }
 
 }
 
